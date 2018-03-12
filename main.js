@@ -76,7 +76,7 @@ var languages = [
         }
             console.log(userString);
 
-// create function to split user input into strings
+// create function to split user input into strings and put in array
 function splitInputToStrings() {
     var userString = "";
     var separateStringsArray = [];
