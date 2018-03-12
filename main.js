@@ -68,3 +68,11 @@ var languages = [
         "kwanzaa": "kwanzaa"
     }
  ];
+// create function to capture user input
+ function userInput()
+        {
+            var userString = "";
+            userString = document.getElementById("textArea").value;
+        }
+            console.log(userString);
+
