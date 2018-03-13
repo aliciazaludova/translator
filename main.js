@@ -1,7 +1,7 @@
 console.log('hi');
 
 var languages = [
-    // Spanish
+    var espanol =
     {
         "a": "un",
         "an": "un",
@@ -23,7 +23,7 @@ var languages = [
         "wishes": "deseos",
         "kwanzaa": "kwanzaa"
     },
-    // German
+    var deutsche =
     {
         "a": "ein",
         "an": "ein",
@@ -45,7 +45,7 @@ var languages = [
         "wishes": "wunsch",
         "kwanzaa": "kwanzaa"
     },
-    // Klingon
+    var klingon =
     {
         "a": ".",
         "an": "ghah",
@@ -68,8 +68,27 @@ var languages = [
         "kwanzaa": "kwanzaa"
     }
  ];
+
+// create writeToDom function to output the translation
+function writeToDom(stuffToWrite, divId) {
+var myDiv = document.getElementById(divId);
+myDiv.innerHTML += stuffToWrite;
+}
+
+// create a domStringMaker -- how is this different from the above? i don't think this is in my cards as a step to complete. i snagged this from another source so i don't fully understand it and how it relates to the above one.
+
+function domStringMaker(stringToPrint) {
+    var string = "<p>" + stringToPrint + "</p>";
+    writeToDom(string, "translated");
+}
+
+function translate(inputWord) {
+    if inputWord === key;
+    output the value of that key (key.value?);
+}
+
 // create function to capture user input
- function userInput()
+function userInput()
         {
             var userString = "";
             userString = document.getElementById("textArea").value;
@@ -77,9 +96,21 @@ var languages = [
             console.log(userString);
 
 // create function to split user input into strings and put in array
-function splitInputToStrings() {
+function splitInputArrayToStrings() {
     var userString = "";
     var separateStringsArray = [];
     separateStrings = userString.split(" ");
 }
     console.log(separateStringsArray);
+
+// create button action
+// loop through buttons to identify which language
+function clickButton(btnClikt){
+    for (var i = 0; i < button.length; i++) {
+        var button = getElementByClassName(btn);
+
+    }
+}
+
+
+    
