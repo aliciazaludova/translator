@@ -1,7 +1,6 @@
 console.log('hi');
 
-var languages = [
-    var espanol =
+var espanol  =
     {
         "a": "un",
         "an": "un",
@@ -22,7 +21,7 @@ var languages = [
         "warm": "calentar",
         "wishes": "deseos",
         "kwanzaa": "kwanzaa"
-    },
+    };
     var deutsche =
     {
         "a": "ein",
@@ -44,7 +43,7 @@ var languages = [
         "warm": "warm",
         "wishes": "wunsch",
         "kwanzaa": "kwanzaa"
-    },
+    };
     var klingon =
     {
         "a": ".",
@@ -66,51 +65,53 @@ var languages = [
         "warm": "warm",
         "wishes": "vlneh",
         "kwanzaa": "kwanzaa"
-    }
- ];
+    };
+// format user input
 
-// create writeToDom function to output the translation
-function writeToDom(stuffToWrite, divId) {
-var myDiv = document.getElementById(divId);
-myDiv.innerHTML += stuffToWrite;
-}
-
-// create a domStringMaker -- how is this different from the above? i don't think this is in my cards as a step to complete. i snagged this from another source so i don't fully understand it and how it relates to the above one.
-
-function domStringMaker(stringToPrint) {
-    var string = "<p>" + stringToPrint + "</p>";
-    writeToDom(string, "translated");
-}
-
-function translate(inputWord) {
-    if inputWord === key;
-    output the value of that key (key.value?);
-}
 
 // create function to capture user input
 function userInput()
         {
             var userString = "";
-            userString = document.getElementById("textArea").value;
+            userString = document.getElementById("input").value;
+            return userString;
         }
-            console.log(userString);
+            // console.log(userString);
 
-// create function to split user input into strings and put in array
+// create function to lowercase everything + then split userInput into strings of indidual words and put in array
 function splitInputArrayToStrings() {
     var userString = "";
     var separateStringsArray = [];
-    separateStrings = userString.split(" ");
+    separateStringsArray = userString.toLowerCase().split(" ");
+    return separateStringsArray;
 }
-    console.log(separateStringsArray);
+    // console.log(separateStringsArray);
 
-// create button action
+// create button action. 3 buttons; 1 of each language
 // loop through buttons to identify which language
-function clickButton(btnClikt){
+var button = getElementByClassName(btn);
     for (var i = 0; i < button.length; i++) {
-        var button = getElementByClassName(btn);
-
-    }
+        button[i].addEventListener("click", function(event) {
+            
+        })
 }
 
+// create writeToDom function to output the translation
+function writeToDom(inputString, divId) {
+    var myDiv = document.getElementById(divId);
+    myDiv.innerHTML += inputString;
+    }
+
+    // function writeToDom(inputString, id){
+    //     document.getElementById(id).innerHTML = inputString;
+    // }
+    
+    // call it
+    // writeToDom(stuffToWrite, divId)
+    
+    function domStringMaker(stringToPrint) {
+        var string = "<p>" + stringToPrint + "</p>";
+        writeToDom(string, "translated");
+    }
 
     

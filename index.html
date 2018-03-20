@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Translator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-    
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />  
 </head>
 <body>
-    <div id="container"></div>
-    <div id="textArea"></div>
+  <div id="container">
+    <h1>Holiday Greeting Translator</h1>
+        <h3>Enter a greeting in English</h3>
+            <textarea id="input" type="text">Happy Holidays</textarea>
     
-        <div id="deutsche" class="btn"></div>
-        <div id="klingon" class="btn"></div>
-        <div id="espanol" class="btn"></div>
+    <section class="button-area">
+        <button id="deutsche" class="btn">Deutsche</button>
+        <button id="klingon" class="btn">Klingon</button>
+        <button id="espanol" class="btn">Espanol</button>
+    </section>
 
     <div id="outputDiv"></div>
-        <div id="clear"></div>
+    <button id="clear" class="clear-btn">CLEAR</button>
     
     
     <script src="main.js"></script>
+  </div> <!--.container-->
 </body>
 </html>
