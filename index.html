@@ -5,19 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Translator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-    
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />  
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|MedievalSharp" rel="stylesheet">
 </head>
 <body>
-    <div id="container"></div>
-    <div id="textArea"></div>
-    <div id="spanishBtn"></div>
-    <div id="germanBtn"></div>
-    <div id="klingonBtn"></div>
-    <div id="clearBtn"></div>
-    <div id="outputDiv"></div>
+  <div id="container">
+    <div><img src="https://media.rbl.ms/image?u=%2Ffiles%2F2016%2F12%2F19%2F636177257892722385159450141_Walking%2520through%2520the%2520Air.gif&ho=https%3A%2F%2Faz616578.vo.msecnd.net&s=403&h=07b84d8e00189e0353b68f025a14af3a027622bbb1b8ac525640f17db8969552&size=980x&c=3693987831"></div>
+    <h1>Holiday Greeting Translator</h1>
+        <h2>Enter a greeting in English</h2>
+            <textarea id="input" type="text" rows="4" cols="30" >Happy Holidays</textarea>
+    
+    <section class="button-area">
+        <button id="deutsche" class="btn">Deutsche</button>
+        <button id="klingon" class="btn">Klingon</button>
+        <button id="espanol" class="btn">Espanol</button>
+    </section>
+
+    <textarea id="output" type="text" rows="4" cols="30"></textarea>
+    <br>
+    <button id="clear" class="clear-btn">CLEAR</button>
     
     
     <script src="main.js"></script>
+  </div> <!--.container-->
 </body>
 </html>
