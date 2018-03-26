@@ -1,5 +1,3 @@
-console.log('hi');
-
 var espanol  =
     {
         "a": "un",
@@ -66,52 +64,65 @@ var espanol  =
         "wishes": "vlneh",
         "kwanzaa": "kwanzaa"
     };
-// format user input
+// locate buttons + save as variables so can add event listener
+// in class example -- this will only work for single words
+const inputbox = document.getElementById('input');
+const espanolbtn = document.getElementById('espanol');
+const deutschebtn = document.getElementById('deutsche');
+const klingonbtn = document.getElementById('klingon');
+const outputbox = document.getElementById('output');
+
+// group buttons in a variable using common class name
+let allTheButtons = document.getElementsByClassName('btn');
+
+// loop through allTheButtons and add eventListener to each
+for (let i = 0; i < allTheButtons.length; i++) {
+    allTheButtons[i].addEventListener('click', (e) => {
+        // grab input, make lower case, hold in variable
+        let userInput = inputbox.value.toLowerCase();
+        // split the input into separate strings
+        let inputArray = userInput.split(" ");
+            // take split intput and loop through it
+            for (var i = 0; i < inputArray.length; i++) {
+                // create a variable to later hold the output 
+                let domOutput = [];
+                // create a variable to hold each iteration (each word)
+                let eachWord = inputArray[i];
+                if (e.target.id === 'deutsche') {
+                    // when it's dynamic and you don't know what the user input is, it must be in [].
+                    domOutput += (deutsche[eachWord] + " ");
+                } else if (e.target.id === 'espanol') {
+                    domOutput += (espanol[eachWord] + " ");
+                } else {
+                    domOutput += (klingon[eachWord] + " ");
+                }
+                outputbox.innerHTML += domOutput;
+            }
+        });
+    };
+
+    const clearBtn = document.getElementById('clear');
+
+    clearBtn.addEventListener('click', (e) => {
+        outputbox.innerHTML = "";
+    });
+        
+    
 
 
-// create function to capture user input
-function userInput()
-        {
-            var userString = "";
-            userString = document.getElementById("input").value;
-            return userString;
-        }
-            // console.log(userString);
-
-// create function to lowercase everything + then split userInput into strings of indidual words and put in array
-function splitInputArrayToStrings() {
-    var userString = "";
-    var separateStringsArray = [];
-    separateStringsArray = userString.toLowerCase().split(" ");
-    return separateStringsArray;
-}
-    // console.log(separateStringsArray);
-
-// create button action. 3 buttons; 1 of each language
-// loop through buttons to identify which language
-var button = getElementByClassName(btn);
-    for (var i = 0; i < button.length; i++) {
-        button[i].addEventListener("click", function(event) {
-            
-        })
-}
 
 // create writeToDom function to output the translation
-function writeToDom(inputString, divId) {
-    var myDiv = document.getElementById(divId);
-    myDiv.innerHTML += inputString;
-    }
+// function writeToDom(inputString, divId) {
+//     var myDiv = document.getElementById(divId);
+//     myDiv.innerHTML += inputString;
+//     }
 
-    // function writeToDom(inputString, id){
-    //     document.getElementById(id).innerHTML = inputString;
-    // }
     
-    // call it
-    // writeToDom(stuffToWrite, divId)
+//     function domStringMaker(stringToPrint) {
+//         var string = "<p>" + stringToPrint + "</p>";
+//         writeToDom(string, "translated");
+//     }
+
     
-    function domStringMaker(stringToPrint) {
-        var string = "<p>" + stringToPrint + "</p>";
-        writeToDom(string, "translated");
-    }
 
     
