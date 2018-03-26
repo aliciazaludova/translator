@@ -5,6 +5,7 @@ var espanol  =
         "the": "el",
         "and": "y",
         "happy": "feliz",
+        "merry": "feliz",
         "holiday": "fiesta",
         "holidays": "fiestas",
         "new": "nuevo",
@@ -27,6 +28,7 @@ var espanol  =
         "the": "das",
         "and": "und",
         "happy": "glücklich",
+        "merry": "glücklich",
         "holiday": "urlaub",
         "holidays": "ferien",
         "new": "neu",
@@ -49,6 +51,7 @@ var espanol  =
         "the": ".",
         "and": "je",
         "happy": "quch",
+        "merry": "quch",
         "holiday": "ql'lop",
         "holidays": "ql'lop",
         "new": "chu'",
@@ -83,11 +86,11 @@ for (let i = 0; i < allTheButtons.length; i++) {
         // split the input into separate strings
         let inputArray = userInput.split(" ");
             // take split intput and loop through it
-            for (var i = 0; i < inputArray.length; i++) {
+            for (var x = 0; x < inputArray.length; x++) {
                 // create a variable to later hold the output 
                 let domOutput = [];
                 // create a variable to hold each iteration (each word)
-                let eachWord = inputArray[i];
+                let eachWord = inputArray[x];
                 if (e.target.id === 'deutsche') {
                     // when it's dynamic and you don't know what the user input is, it must be in [].
                     domOutput += (deutsche[eachWord] + " ");
